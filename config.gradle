@@ -1,0 +1,85 @@
+ext {
+    //android开发版本配置
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
+            applicationId    : "cn.rover.demo",
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 19121001,
+            versionName      : "2.9.2",
+    ]
+
+    //version配置
+    versions = [
+            "support-version": "28.0.0",
+            "junit-version"  : "4.12",
+    ]
+    //support配置
+    support = [
+            "constraint-constraint": "com.android.support.constraint:constraint-layout:1.1.3",
+            "androidx-appcompat"   : "androidx.appcompat:appcompat:1.1.0",
+            'design'               : "com.android.support:design:${versions["support-version"]}",
+            'junit'                : "junit:junit:${versions["junit-version"]}",
+            'kotlin_stdlib'        : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            //百分比布局
+            "support:percent"      : "com.android.support:percent:27.1.1",
+    ]
+    //依赖第三方配置
+    dependencies = [
+            //rxjava
+            "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.2.3",
+            "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            //rx系列与View生命周期同步
+            "rxlifecycle"                          : "com.trello.rxlifecycle2:rxlifecycle:2.2.2",
+            "rxlifecycle-components"               : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.2",
+            //rxbinding
+            "rxbinding"                            : "com.jakewharton.rxbinding2:rxbinding:2.1.1",
+            //rx 6.0权限请求
+            "rxpermissions"                        : "com.github.tbruyelle:rxpermissions:0.10.2",
+            //network
+            "okhttp"                               : "com.squareup.okhttp3:okhttp:3.10.0",
+            "retrofit"                             : "com.squareup.retrofit2:retrofit:2.4.0",
+            "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
+            "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+            //glide图片加载
+            "glide"                                : "com.github.bumptech.glide:glide:4.8.0",
+            "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.8.0",
+            //json解析
+            "gson"                                 : "com.google.code.gson:gson:2.8.5",
+            //material-dialogs
+            "material-dialogs-core"                : "com.afollestad.material-dialogs:core:0.9.4.5",
+            "material-dialogs-commons"             : "com.afollestad.material-dialogs:commons:0.9.4.5",
+            //recyclerview的databinding套装
+            "bindingcollectionadapter"             : "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0",
+            "bindingcollectionadapter-recyclerview": "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0",
+            //Google AAC
+            "lifecycle-extensions"                 : "android.arch.lifecycle:extensions:1.1.1",
+            "lifecycle-compiler"                   : "android.arch.lifecycle:compiler:1.1.1",
+            //StatusBarUtil
+            "statusbarutil"                        : "com.jaeger.statusbarutil:library:1.5.1",
+            //事件传递
+            "eventbus"                             : "org.greenrobot:eventbus:3.0.0",
+            //Zxing
+            "zxing"                                : "com.google.zxing:core:3.2.1",
+            //图片放大缩小
+            "photoview"                            : "com.github.chrisbanes.photoview:library:1.2.4",
+            //签名
+            "signature"                            : "com.github.gcacace:signature-pad:1.2.1",
+            //流式布局
+            "flowlayout"                           : "com.hyman:flowlayout-lib:1.1.2",
+            //动态权限
+            "grantor"                              : "com.github.dfqin:grantor:2.5",
+
+            "banner"                               : "com.youth.banner:banner:1.4.10",
+            //顶部导航栏
+            "FlycoTabLayout_Lib"                   : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            //
+            "xrecyclerview"                        : "com.jcodecraeer:xrecyclerview:1.6.0",
+            //沉浸式状态栏和改变状态栏背景色  基础依赖包，必须要依赖
+            "immersionbar"                         : "com.gyf.immersionbar:immersionbar:3.0.0",
+            // fragment快速实现（可选）
+            "immersionbar-components"              : "com.gyf.immersionbar:immersionbar-components:3.0.0",
+            "rxbus"                                : "com.hwangjr.rxbus:rxbus:1.0.6",
+    ]
+}
