@@ -172,6 +172,28 @@ public class AudioRecorder {
         }
     }
 
+    // reset
+    public void cancel() {
+        //假如有暂停录音
+        try {
+            if (filesName.size() > 0) {
+                List<String> filePaths = new ArrayList<>();
+                for (String fileName : filesName) {
+                    filePaths.add(FileUtils.getPcmFileAbsolutePath(fileName));
+                }
+                //清除
+                filesName.clear();
+                FileUtils.clearFiles(filePaths);
+            }
+        } catch (IllegalStateException e) {
+            throw new IllegalStateException(e.getMessage());
+        }
+        if (audioRecord != null) {
+            audioRecord.release();
+            audioRecord = null;
+        }
+        status = AudioStatus.STATUS_NO_READY;
+    }
     /**
      * 释放资源
      */
